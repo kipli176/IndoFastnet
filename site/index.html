@@ -916,7 +916,7 @@
             }
         }
 
-        btn ? .addEventListener('click', () => {
+        btn?.addEventListener('click', () => {
             const isHidden = menu.classList.toggle('hidden');
             btn.setAttribute('aria-expanded', String(!isHidden));
         });

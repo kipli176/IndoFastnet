@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="140" viewBox="0 0 520 140" role="img" aria-label="Logo Indofastnet">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3B82F6"/>
+      <stop offset="1" stop-color="#34D399"/>
+    </linearGradient>
+
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.2" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 .35 0" />
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- MARK: connected "N" -->
+  <g transform="translate(28,22)" filter="url(#softGlow)">
+    <!-- Outer ring (echo AntriFast circular stroke) -->
+    <circle cx="48" cy="48" r="36"
+      fill="none" stroke="url(#g)" stroke-width="12" stroke-linecap="round"
+      stroke-dasharray="185 45"
+      transform="rotate(-22 48 48)"/>
+
+    <!-- Network N -->
+    <path d="M26 72 V24 L70 72 V24"
+      fill="none" stroke="url(#g)" stroke-width="10"
+      stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Nodes -->
+    <circle cx="26" cy="24" r="5.2" fill="#34D399"/>
+    <circle cx="26" cy="72" r="5.2" fill="#34D399"/>
+    <circle cx="70" cy="24" r="5.2" fill="#34D399"/>
+    <circle cx="70" cy="72" r="5.2" fill="#34D399"/>
+
+    <!-- Small accent dot (like AntriFast) -->
+    <circle cx="38" cy="38" r="4.6" fill="#34D399"/>
+  </g>
+
+  <!-- WORDMARK -->
+  <g transform="translate(140,32)">
+    <!-- "indofast" + "net" with gradient -->
+    <text x="0" y="44" font-size="40" font-weight="800"
+          font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial"
+          fill="#E5E7EB" letter-spacing="-0.5">
+      <tspan>indofast</tspan><tspan fill="url(#g)">net</tspan>
+    </text>
+
+    <!-- Divider -->
+    <line x1="0" y1="58" x2="250" y2="58"
+          stroke="#34D399" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Tagline -->
+    <text x="0" y="78" font-size="14" font-weight="500"
+          font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial"
+          fill="#94A3B8">
+      Rumah produk digital dari IndofastDigital
+    </text>
+  </g>
+</svg>
